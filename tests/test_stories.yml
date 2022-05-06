@@ -1,0 +1,91 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: happy path 1
+  steps:
+  - user: |
+      γεια !
+    intent: greet
+  - action: utter_greet
+  - user: |
+      τελεια
+    intent: mood_great
+  - action: utter_happy
+
+- story: happy path 2
+  steps:
+  - user: |
+      γεια!
+    intent: greet
+  - action: utter_greet
+  - user: |
+      τελεια
+    intent: mood_great
+  - action: utter_happy
+  - user: |
+      αντιο!
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: sad path 1
+  steps:
+  - user: |
+      γεια
+    intent: greet
+  - action: utter_greet
+  - user: |
+      δεν ειμαι καλα
+    intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - user: |
+      ναι
+    intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - user: |
+      γεια
+    intent: greet
+  - action: utter_greet
+  - user: |
+      δεν ειμαι καλα
+    intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - user: |
+      οχι ιδιαιτερα
+    intent: deny
+  - action: utter_goodbye
+
+- story: sad path 3
+  steps:
+  - user: |
+      γεια
+    intent: greet
+  - action: utter_greet
+  - user: |
+      χαλια
+    intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - user: |
+      οχι
+    intent: deny
+  - action: utter_goodbye
+
+- story: say goodbye
+  steps:
+  - user: |
+      αντιο!
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: bot question
+  steps:
+  - user: |
+      Πόσους πόντους παρέδωσε η άμυνα των Πάνθερς;
+    intent: bot_answer_question
+  - action: bot_answer_question
