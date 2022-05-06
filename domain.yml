@@ -7,7 +7,6 @@ intents:
   - deny
   - mood_great
   - mood_unhappy
-  - bot_challenge
   - answer_question
   - db_update
 
@@ -25,15 +24,23 @@ responses:
   utter_happy:
   - text: "Τέλεια, καλή συνέχεια!"
 
+  utter_goodbye:
+  - text: "Αντίο"
+
   utter_answer_question:
   - text: "Πόσους πόντους παρέδωσε η άμυνα των Πάνθερς;"
 
   utter_db_update:
   - text: "Λήψη νέων άρθων"
 
-  utter_goodbye:
-  - text: "Αντίο"
+  # utter_iamabot:
+  # - text: "I am a bot, powered by Rasa."
 
+actions:
+  - bot_answer_question
+  - bot_db_update
+
+# TODO add action to refresh the database
 
 session_config:
   session_expiration_time: 60
