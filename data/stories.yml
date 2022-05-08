@@ -28,3 +28,17 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: answer question path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: answer_question
+  - action: bot_answer_question
+
+- story: database update path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: db_update
+  - action: bot_db_update

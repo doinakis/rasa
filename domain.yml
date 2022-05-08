@@ -7,6 +7,8 @@ intents:
   - deny
   - mood_great
   - mood_unhappy
+  - answer_question
+  - db_update
 
 responses:
   utter_greet:
@@ -24,6 +26,10 @@ responses:
 
   utter_goodbye:
   - text: "Αντίο"
+
+actions:
+  - bot_answer_question
+  - bot_db_update
 
 session_config:
   session_expiration_time: 60
