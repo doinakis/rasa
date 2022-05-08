@@ -27,6 +27,12 @@ responses:
   utter_goodbye:
   - text: "Αντίο"
 
+  utter_answer_question:
+  - text: "Πόσους πόντους παρέδωσε η άμυνα των Πάνθερς;"
+
+  utter_db_update:
+  - text: "Λήψη νέων άρθων"
+
 actions:
   - bot_answer_question
   - bot_db_update

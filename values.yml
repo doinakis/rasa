@@ -1,3 +1,6 @@
+app:
+  install: false
+  existingUrl: <IP of custom action server>
 rasax:
   tag: "1.1.0"
 eventService:
