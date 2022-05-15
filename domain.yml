@@ -33,10 +33,14 @@ responses:
   utter_db_update:
   - text: "Λήψη νέων άρθων"
 
+  # utter_iamabot:
+  # - text: "I am a bot, powered by Rasa."
+
 actions:
   - bot_answer_question
   - bot_db_update
 
+# TODO add action to refresh the database
 entities:
   - time
 
@@ -47,6 +51,10 @@ slots:
     mappings:
     - type: from_entity
       entity: time
+
+templates:
+  utter_link:
+  - text: Σύμφωνα με [αυτό]{link} το άρθρο.
 
 session_config:
   session_expiration_time: 60
