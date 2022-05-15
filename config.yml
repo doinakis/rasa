@@ -1,6 +1,6 @@
 # The config recipe.
 # https://rasa.com/docs/rasa/model-configuration/
-version: "3.0"
+version: "3.1"
 recipe: default.v1
 
 # Configuration for Rasa NLU.
