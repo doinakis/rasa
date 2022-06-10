@@ -29,28 +29,6 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: answer question path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: answer_question
-  - action: utter_answer_question
-  - action: bot_answer_question
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: answer question path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: answer_question
-  - action: utter_answer_question
-  - action: bot_answer_question
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_rephrase
-
 - story: database update path 1
   steps:
   - intent: greet
@@ -65,7 +43,42 @@ stories:
 
 - story: bot challenge
   steps:
-  - user: |
-      είσαι μποτάκι?
-    intent: bot_challenge
+  - intent: bot_challenge
   - action: utter_iamabot
+
+- story: Story from Conversation ID 341ff7bedd8d4ad1b49d91f72e524f6d
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: answer_question
+  - action: utter_answer_question
+  - action: bot_answer_question
+  - slot_was_set:
+    - time_slot: null
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_rephrase
+
+- story: Story from Conversation ID 2d9af21647d044729c696e50eee047f7
+  steps:
+  - intent: answer_question
+  - action: utter_answer_question
+  - action: bot_answer_question
+  - slot_was_set:
+    - time_slot: null
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Story from Conversation ID ab8b66fe984142d18f9db317faaae2e8
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: answer_question
+  - action: utter_answer_question
+  - action: bot_answer_question
+  - slot_was_set:
+    - time_slot: null
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
