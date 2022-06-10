@@ -82,3 +82,19 @@ stories:
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
+
+- story: Story from Conversation ID 1129ac71b97341d69fd83ec34df765f2
+  steps:
+  - intent: answer_question
+  - action: utter_answer_question
+  - action: bot_answer_question
+  - slot_was_set:
+    - time_slot: null
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_rephrase
+
+- story: Story from Conversation ID 2a8b6e11abf84f029ce68c612587aa3d
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
