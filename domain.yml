@@ -13,7 +13,7 @@ intents:
 
 responses:
   utter_greet:
-  - text: "Γεια σου! Πώς είσαι?"
+  - text: "Γεια σου! Πώς μπορώ να σε βοηθήσω?"
 
   utter_cheer_up:
   - text: "Να κάτι για να σε κάνει να νιώσεις καλύτερα:"
@@ -36,6 +36,9 @@ responses:
 
   utter_iamabot:
   - text: "Είμαι ένας ψηφιακός βοηθός που παρέχει πληροφορίες ειδήσεων :)"
+
+  utter_rephrase:
+  - text: "Χμμ δοκίμασε μία διαφορετική ερώτηση."
 
 actions:
   - bot_answer_question

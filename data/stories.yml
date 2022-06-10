@@ -29,17 +29,37 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: answer question path
+- story: answer question path 1
   steps:
   - intent: greet
   - action: utter_greet
   - intent: answer_question
+  - action: utter_answer_question
   - action: bot_answer_question
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
 
-- story: database update path
+- story: answer question path 2
   steps:
   - intent: greet
   - action: utter_greet
+  - intent: answer_question
+  - action: utter_answer_question
+  - action: bot_answer_question
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_rephrase
+
+- story: database update path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: db_update
+  - action: bot_db_update
+
+- story: database update path 2
+  steps:
   - intent: db_update
   - action: bot_db_update
 
