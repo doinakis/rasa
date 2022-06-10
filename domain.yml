@@ -13,14 +13,14 @@ intents:
 
 responses:
   utter_greet:
-  - text: "Γεια σου! Πώς μπορώ να σε βοηθήσω?"
+  - text: "Γεια σου! Πώς μπορώ να σε βοηθήσω;"
 
   utter_cheer_up:
   - text: "Να κάτι για να σε κάνει να νιώσεις καλύτερα:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
-  - text: "Σε βοήθησε αυτό?"
+  - text: "Σε βοήθησε αυτό;"
 
   utter_happy:
   - text: "Τέλεια, είμαι στη διάθεσή σου για οποιαδήποτε άλλη ερώτηση!"
