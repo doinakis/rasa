@@ -40,6 +40,9 @@ responses:
   utter_rephrase:
   - text: "Χμμ συγγνώμη που δεν βρήκα κάτι σχετικό. Δοκίμασε να αναδιατυπώσεις ή κάνε μία νέα ερώτηση :D"
 
+  utter_fallback:
+  - text: "Δεν είμαι σίγουρος ότι κατάλαβα καλά. Δοκίμασε να αναδιατυπώσεις το μήνυμα σου."
+
 actions:
   - bot_answer_question
   - bot_db_update
